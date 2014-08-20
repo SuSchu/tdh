@@ -1,0 +1,608 @@
+/*
+Theme Name: WP BootstrapTheme
+Theme URI: http://wigwam.im
+Description: A demo theme 
+Author: Susan
+Author URI: http://wigwam.im
+Version: 1.0
+Tags: responsive, white, bootstrap
+
+
+This simple theme was built using the example Bootstrap theme 
+*/
+
+/*Bootstrap core CSS */
+@import url('bootstrap/css/bootstrap.min.css');
+/* Bootstrap theme */
+@import url('bootstrap/css/bootstrap-theme.min.css');
+/*Bootstrap core CSS */
+@import url('fonts.css');
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6em;
+}
+
+.modul{
+	padding:85px 0px;
+}
+
+a:hover,
+a:focus{
+	color:#017d9e;
+}
+
+a{
+	color: #005c74;
+	text-decoration: underline;
+}
+
+h1{
+	font-size: 60px;
+	color: white;
+	text-transform: uppercase;
+	margin:0px 0px 10px;
+	font-weight: 600;
+}
+
+h2{
+	text-transform: uppercase;
+	font-size: 40px;
+	margin:0px 0px 10px;
+	font-weight: 600;
+}
+
+h3{
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: 600;
+}
+
+h4{
+	font-size: 24px;
+	font-weight: 600;
+}
+
+h5{
+	margin-top: 0px;
+	margin-bottom: 20px;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+ul{
+	padding: 0px;
+}
+
+.title{
+		text-align: center;
+}
+
+.btn-primary{
+	background: #c2f300;
+	background: -moz-linear-gradient(top,  #c2f300 0%, #beee00 50%, #beee00 51%, #b7e400 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c2f300), color-stop(50%,#beee00), color-stop(51%,#beee00), color-stop(100%,#b7e400));
+	background: -webkit-linear-gradient(top,  #c2f300 0%,#beee00 50%,#beee00 51%,#b7e400 100%);
+	background: -o-linear-gradient(top,  #c2f300 0%,#beee00 50%,#beee00 51%,#b7e400 100%);
+	background: -ms-linear-gradient(top,  #c2f300 0%,#beee00 50%,#beee00 51%,#b7e400 100%);
+	background: linear-gradient(to bottom,  #c2f300 0%,#beee00 50%,#beee00 51%,#b7e400 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c2f300', endColorstr='#b7e400',GradientType=0 );
+	border: none;
+	color: #005c74;
+	font-weight: 600;
+	font-size: 20px;
+	text-transform: uppercase;
+	position: relative;
+	text-shadow:none;
+	margin-top: 30px;
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+	padding: 12px 20px;
+	border-radius: 5px;
+	margin: 30px auto 0px;
+	display: table;
+}
+
+.btn-primary .caret{
+	width: 20px;
+	height: 20px;
+	display: block;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+	background: #c2f300;
+	border-radius: 5px;
+	position: absolute;
+	top: -8px;
+	border-top: 0px;
+	border-radius: 5px;
+	left: 50%;
+	margin-left: -10px;
+}
+.btn-primary:hover .caret{
+	background: #b7e400;
+}
+
+.btn-primary:hover{
+	background: #b7e400;
+	background: -moz-linear-gradient(top,  #b7e400 0%, #beee00 49%, #beee00 50%, #c2f300 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b7e400), color-stop(49%,#beee00), color-stop(50%,#beee00), color-stop(100%,#c2f300));
+	background: -webkit-linear-gradient(top,  #b7e400 0%,#beee00 49%,#beee00 50%,#c2f300 100%);
+	background: -o-linear-gradient(top,  #b7e400 0%,#beee00 49%,#beee00 50%,#c2f300 100%);
+	background: -ms-linear-gradient(top,  #b7e400 0%,#beee00 49%,#beee00 50%,#c2f300 100%);
+	background: linear-gradient(to bottom,  #b7e400 0%,#beee00 49%,#beee00 50%,#c2f300 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7e400', endColorstr='#c2f300',GradientType=0 );
+	color:#017d9e;
+	text-decoration: none;
+}
+
+.no-btn{
+	cursor: default;
+	color:black;
+	background: #c2f300;
+	font-size: 16px;
+	text-transform: none;
+	font-weight: 400;
+	width: 85%;
+}
+
+.no-btn label,
+.no-btn .gform_wrapper .top_label .gfield_label{
+	font-weight: 400;
+}
+
+.no-btn:hover{
+	background: #c2f300;
+	color:black;
+	filter:none;
+
+}
+
+.btn-primary:hover a,
+.btn-primary a{
+	text-decoration: none;	
+} 
+
+.btn-more,
+#load-more{
+	clear: both;
+	text-decoration: none;
+	display: table;
+	border-bottom: 1px solid;
+}
+
+.btn-more:hover{
+	text-decoration: none;
+}
+
+
+/* Header
+-------------------------------------------------- 
+--------------------------------------------------*/
+
+#header{
+	position: relative;
+}
+
+#mylist{
+    position: relative;
+    width: 100%;
+    
+}
+
+#slider{
+	width: 20%;
+	display: block;
+	margin: -52px auto 30px;
+}
+
+#mylist li{
+	display:none;
+	position: absolute;
+	bottom: 0px;
+	left:0px;
+	width: 100%;
+}
+
+#mylist img{
+	width: 100%;
+}
+
+#mylist li.activeSlide{
+	display:list-item;
+}
+
+.navbar{
+	background: #94b61e;
+	margin:0px;
+	border-radius: 0px;
+	border:0px;
+}
+
+.navbar-button {
+	display: inline-block;
+	float: left;
+	line-height: 50px;
+	font-size: 18px;
+	color: #013641;
+	text-shadow: none;
+}
+
+.navbar-nav{
+	float: none;
+	text-align: center;
+}
+
+
+.navbar-nav>li>a{
+	color: #013641;
+	text-shadow:none;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none;
+	line-height: 21px;
+	padding: 0px;
+}
+
+.navbar-nav>li>a>span{
+	border-bottom: 1px solid;
+	margin: 14px 15px;
+	display: inline-block;
+}
+
+.navbar-nav>li{
+	float:none;
+	display: inline-block;
+}
+
+.nav>li:hover, .nav>li:focus, .nav>li.active, .nav>li>a:hover, .nav>li>a:focus {
+	text-decoration: none;
+	background-color: #ccff00;
+}
+
+#affix-menu.affix{
+	position: fixed;
+	z-index: 99;
+    top: 0;
+    width: 100%
+}
+
+
+/* Teaser
+-------------------------------------------------- 
+--------------------------------------------------*/
+
+.teaser-box1,
+.teaser-box2{
+	padding-top: 35px;
+	padding-bottom: 35px;
+}
+
+.teaser-box1{
+	background: #007d9e;
+}
+.teaser-box2{
+	background: #00566c;
+}
+
+#kampagne{
+	background: #006d8a;
+}
+.teaser-box1 .btn-more,
+.teaser-box2 .btn-more{
+	color: #c2f300;
+}
+.teaser-box1 .btn-more:hover,
+.teaser-box2 .btn-more:hover{
+	color: #94b61e;
+}
+
+.moreText{
+	display: none;
+}
+
+/* StoryGrid
+-------------------------------------------------- 
+--------------------------------------------------*/
+#geschichten{
+	background: #68b7da;
+}
+
+#geschichten .title{
+	padding-bottom: 25px;
+}
+
+.story{
+	overflow:hidden;
+	position: relative;
+	padding-bottom: 33.33333333%;
+	background: #2383a5;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 1px solid #68b7da;
+}
+
+.story.withImg{
+	background-size:contain;
+	background-repeat: none; 
+}
+
+.story.withImg .content{
+	background: url(img/box-bg.png);
+	bottom: -85%;
+	padding-top: 15px;
+}
+
+.story .content{
+	position:absolute;
+    height:100%; 
+    width:100%;
+    padding: 35px 30px;
+	left: 0px;
+	color: white;
+}
+
+#geschichten #load-more{
+	color: white;
+	text-align: center;
+	padding-top: 20px;
+	margin: 0px auto;
+	background: none;
+	border: none;
+	border-bottom: 1px solid;
+	box-shadow: none;
+}
+#geschichten #load-more:hover,
+#geschichten #load-more:focus {
+	color: #bae5f9;
+	box-shadow: none;
+	outline: none;
+}
+
+div.excerpt {
+	height: 70%;
+	overflow: hidden;
+	margin-bottom: 40px;
+}
+
+#formhide{
+	display: block;
+	text-align: right;
+	padding-top: 5px;
+}
+
+
+#form{
+	display: none;
+}
+
+input[type=text], textarea {
+	border-radius: 5px;
+	border: 1px solid lightgrey;
+}
+
+input,textarea {
+	margin-bottom: 15px;
+}
+
+.gform_wrapper .gfield_checkbox li label{
+	font-size: 12px;
+	line-height: 1.8em;
+}
+.gform_wrapper .top_label input.medium{
+	width: 100% !important;
+	line-height: 1.6em;
+	font-size: 12px;
+	padding-top: 5px;
+}
+
+.gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type=submit] {
+	background:#007d9e;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 12px 20px;
+	font-size: 20px !important;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin: 0px auto;
+	display: block;
+	text-align: center;
+}
+
+.gform_wrapper{
+	max-width: 100% !important;
+}
+
+#field_1_5,
+#field_1_1{
+	clear:none;
+}
+
+
+/* Projects
+-------------------------------------------------- 
+--------------------------------------------------*/
+
+#projekte{
+	background: #98ba1f;
+}
+
+#projekte .title{
+	padding-bottom: 25px;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: blue;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+
+
+/* Donate
+-------------------------------------------------- 
+--------------------------------------------------*/
+#spenden{
+	background: #00566d;
+}
+
+#spenden h3 [class^="icon-"],
+#spenden h3  [class*=" icon-"]{
+	margin-right: 10px;
+	position: absolute;
+	left: 0px;
+	color: #80aab6;
+}
+
+.donate-block{
+	border-top: 1px solid #80aab6;
+	padding: 5px 0px 25px 30px;
+	position: relative;
+	margin: 0px 30px;
+}
+
+.donate-block .row{
+	margin-right: 0px;
+}
+#spenden h3 .icon-mobile-phone{
+	font-size: 35px;
+	top: 16px;
+	left: 4px;
+}
+
+#spenden h3 .icon-envelope-o{
+	font-size: 21px;
+	top: 27px;
+}
+
+#spenden .btn-primary{
+	margin:10px auto 20px;
+}
+
+#spenden .thanks{
+	text-align: center;
+	background: #0c5a6f;
+}
+
+#spenden .thanks img{
+	margin: 0px auto 25px;
+	display: block;
+}
+
+#spenden .thanks .first{
+	color:transparent;
+	font-size: 1px;
+}
+
+#spenden .donate-block.schein  a{
+	color: #80aab6;
+}
+#spenden .donate-block.schein a:hover{
+	color: #0e82a1;
+}
+
+
+
+
+/* Footer
+-------------------------------------------------- 
+--------------------------------------------------*/
+#footer{
+	background: #e7d4a8;
+	color: black;
+}
+
+.tdh-logo img{
+	width: 240px;
+}
+
+
+
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+/*ab 768*/
+@media (min-width: 768px) {
+
+	  /* Bump up size of carousel content */
+	.carousel-caption p {
+		margin-bottom: 20px;
+	    font-size: 21px;
+	    line-height: 1.4;
+	}
+    .col-sm-height {
+        display:table-cell;
+        float:none;
+    }
+}
+
+/*bis 992*/
+@media (max-width: 992px) {
+	.story{
+  		padding-bottom: 50%;
+  	}
+}
+/*bis 500*/
+@media (max-width: 500px) {
+	.story{
+  		padding-bottom: 100%;
+  		width: 100%;
+  		border-left-width: 2px;
+		border-right-width: 2px;
+  	}
+  	.story .content{
+  		padding: 15px 10px;
+  	}
+  	.no-btn{
+    	width:100%;
+    }
+    .container{
+    	padding-right: 10px;
+    	padding-left: 10px;
+    }
+    .row {
+		margin-right: -10px;
+		margin-left: -10px;
+	}
+	.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{
+		padding-right: 10px;
+    	padding-left: 10px;
+	}
+	h2{
+		font-size: 30px;
+	}
+	.modul {
+		padding: 35px 0px;
+	}
+}
+
