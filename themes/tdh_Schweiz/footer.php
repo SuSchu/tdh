@@ -187,7 +187,7 @@
      
      $('#affix-menu').affix({
         offset: {
-          top: $('#header').height();
+          top: $('#header').height()
         }
       }); 
 
