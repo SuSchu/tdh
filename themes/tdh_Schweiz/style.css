@@ -108,6 +108,7 @@ ul{
 	border-radius: 5px;
 	margin: 30px auto 0px;
 	display: table;
+	min-width: 50%;
 }
 
 .btn-primary .caret{
@@ -145,7 +146,7 @@ ul{
 
 .no-btn{
 	cursor: default;
-	color:black;
+	color:#013641;
 	background: #c2f300;
 	font-size: 16px;
 	text-transform: none;
@@ -160,7 +161,7 @@ ul{
 
 .no-btn:hover{
 	background: #c2f300;
-	color:black;
+	color:#013641;
 	filter:none;
 
 }
@@ -306,6 +307,15 @@ ul{
 
 .moreText{
 	display: none;
+}
+
+#kampagne .logo-tdh,
+#kampagne .logo-zewo{
+margin-top: 24px;
+height: 36px;
+margin-left: 15px;
+float: right;
+margin-bottom: 35px;
 }
 
 /* StoryGrid

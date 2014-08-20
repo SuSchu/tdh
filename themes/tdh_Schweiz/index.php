@@ -18,7 +18,11 @@
             <p>Unser Leben wäre anders verlaufen, hätten wir keinen Mutmacher gehabt. This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
             <a class="btn-more" role="button">mehr erfahren</a>
             <p class="moreText">Unser Leben wäre anders verlaufen, hätten wir keinen Mutmacher gehabt. This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+            <img class="logo-zewo" src="<?php bloginfo('template_directory'); ?>/img/zewo.png"/>
+            <img class="logo-tdh" src="<?php bloginfo('template_directory'); ?>/img/tdh-logo.png"/>
+              
             <a class="btn-primary" role="button"><span class="caret"></span>Jetzt spenden.</a> 
+          
           </div>
         </div>
       </div>
