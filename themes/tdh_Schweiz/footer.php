@@ -6,15 +6,17 @@
             <div class="title">
               <p>Werde Mutmacher!</p>
               <h2>Spende Mut!</h2>
+              <img class="logo-zewo" src="<?php bloginfo('template_directory'); ?>/img/zewo.png"/>
+              
             </div>
             <div class="content">
               <div class="donate-block">
                 <h3><span class="icon-rss"></span>Online</h3>
                 <div class="row">
-                  <div class="col-xs-6">
+                  <div class="col-xs-12 col-md-6 sm-hide">
                     <img src="<?php bloginfo('template_directory'); ?>/img/donate.png"/>
                   </div>
-                  <div class="col-xs-6">
+                  <div class="col-xs-12 col-md-6 ">
                     <a class="btn-primary" target="_blank" href="http://www.terredeshommesschweiz.ch/spenden/online_spenden/" role="button">Jetzt Spenden!</a>
                     <p>
                       Du wirst auf die terre des hommes 

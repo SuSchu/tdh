@@ -474,12 +474,26 @@ input,textarea {
 	background: #00566d;
 }
 
+#spenden .title{
+	position: relative;
+}
+
+#spenden .logo-zewo{
+	position: absolute;
+	top: 0px;
+	right: 30px;
+}
+
 #spenden h3 [class^="icon-"],
 #spenden h3  [class*=" icon-"]{
 	margin-right: 10px;
 	position: absolute;
 	left: 0px;
 	color: #80aab6;
+}
+.donate-block [class^="col-"],
+.donate-block [class*=" col-"]{
+	padding-right: 0px;
 }
 
 .donate-block{
@@ -522,12 +536,14 @@ input,textarea {
 	font-size: 1px;
 }
 
-#spenden .donate-block.schein  a{
+#spenden .donate-block.schein a{
 	color: #80aab6;
 }
 #spenden .donate-block.schein a:hover{
 	color: #0e82a1;
 }
+
+
 
 
 
@@ -564,13 +580,22 @@ input,textarea {
         display:table-cell;
         float:none;
     }
+
 }
 
 /*bis 992*/
-@media (max-width: 992px) {
+@media (max-width: 991px) {
 	.story{
   		padding-bottom: 50%;
   	}
+  	.sm-hide{
+  		display: none;
+  	}
+
+  	#spenden .logo-zewo{
+  		top:-50px;
+  	}
+
 }
 /*bis 500*/
 @media (max-width: 500px) {
@@ -603,6 +628,11 @@ input,textarea {
 	}
 	.modul {
 		padding: 35px 0px;
+	}
+	#spenden .logo-zewo {
+		top: -18px;
+		width: 40px;
+		right: 15px;
 	}
 }
 
