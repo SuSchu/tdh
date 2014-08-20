@@ -30,7 +30,7 @@ body {
 }
 
 .modul{
-	padding:85px 0px;
+	padding:55px 0px;
 }
 
 a:hover,
@@ -236,6 +236,24 @@ ul{
 	text-shadow: none;
 }
 
+.navbar-button a,
+.navbar-button a:hover{
+	text-decoration: none;
+}
+
+a.back-link{
+	font-size: 16px;
+	position: relative;
+	display: block;
+	padding-left: 24px;
+}
+a.back-link span{
+	margin-right: 10px;
+	position: absolute;
+	top: 19px;
+	left: 0px;
+}
+
 .navbar-nav{
 	float: none;
 	text-align: center;
@@ -435,6 +453,44 @@ input,textarea {
 #field_1_1{
 	clear:none;
 }
+
+/* Einzel Geschichten
+-------------------------------------------------- 
+--------------------------------------------------*/
+#geschichten.single img{
+	width: 100%;
+}
+
+.page-nav,
+.single-content{
+	background: #2383a5;
+}
+
+.single-content{
+	margin-top: 5px;
+	padding: 25px 0px;
+}
+.alignright{
+	float: right;
+}
+
+.alignright,
+.alignleft{
+	display: inline-block;
+	line-height: 35px;
+	margin: 0px;
+}
+
+.alignright a,
+.alignleft a{
+	color:white;
+}
+
+.alignright a:hover,
+.alignleft a:hover{
+	color:#68b7da;
+}
+
 
 
 /* Projects
@@ -644,5 +700,17 @@ input,textarea {
 		width: 40px;
 		right: 15px;
 	}
+	#geschichten.single [class^="col-"],
+	#geschichten.single [class*=" col-"]{
+		width: 100%;
+	}
+
+	#geschichten.single img{
+		width: 250px;
+		margin:0px auto;
+		display: block;
+	}
+
+
 }
 

@@ -69,18 +69,3 @@
       </div>
       <div id="slider"></div>
     </div>
-
-    <!-- Fixed navbar -->
-    <div id="affix-menu" class="navbar" role="navigation">
-      <div class="container">
-          <div class="navbar-button">
-            <span class="icon-align-justify"></span>
-          </div>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <?php wp_nav_menu( array('menu' => 'Header Menu','link_before' => '<span>',
-                        'link_after' => '</span>','items_wrap' => '%3$s', 'container' => '') ); ?> 
-            </ul>
-          </div>
-      </div>
-    </div>

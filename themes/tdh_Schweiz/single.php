@@ -1,51 +1,63 @@
 <?php get_header(); ?>
-
-    <!-- Teaser ========================================= -->
-    <div id="kampagne">
+    <!-- Fixed navbar -->
+    <div class="navbar" role="navigation">
       <div class="container">
-        <div class="row ">
-          <div class="col-6 col-sm-12 col-lg-6 teaser-text modul">
-            <h2><?php the_title(); ?></h2>
-            <?php the_content(); ?>
+          <div class="navbar-button">
+            <a class="back-link" href="<?php echo esc_url( home_url( '/' ) ); ?>"><span class="icon-chevron-left"></span>  zurück zur Übersicht</a>
           </div>
-          <div class="col-6 col-sm-12 col-lg-6 teaser-call-to-action modul">
-            <?php if ( has_post_thumbnail() ) {?>
-              <?php
-                $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'story-quad' );
-              ?>
-              <img src="<?php echo $thumb['0'];?>"/>
-            <?php } ?>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              
+            </ul>
           </div>
-        </div>
       </div>
     </div>
     
-    
     <!-- Stories ========================================= -->
-    <div id="geschichten" class="modul">
+    <div id="geschichten" class="single modul">
       <div class="title">
         <div class="container">
             <h2>Hast du einen Wegbegleiter?</h2>
             <p>Unser Leben wäre anders verlaufen, hätten wir keinen Mutmacher gehabt</p>
         </div>
       </div>
-      <div class="grid">
+      <?php while ( have_posts() ) : the_post(); ?>
+      <div class="page-nav"> 
         <div class="container">
-          <div class="row">
-
-            <?php 
-            echo do_shortcode('[ajax_load_more post_type="post" posts_per_page="6" scroll="false" button_label="Mehr Geschichten laden"]');
-              
-            ?>
-          </div><!--/row-->
-          <div class="btn-primary btn-storie" role="button">
-            <a id="formshow"><span class="caret"></span>Jetzt deine Geschichte erzählen!</a>
-            <?php get_sidebar( 'sidebar-1' ); ?>
+          <div class="row"> 
+            <nav class="col-xs-12">
+              <?php previous_post_link('<p class="alignleft">&laquo; %link</p>', 'Letzte', TRUE ); ?>
+              <?php next_post_link('<p class="alignright">%link &raquo;</p>', 'Nächste', TRUE ); ?>
+            </nav>
           </div>
-        </div><!--/container-->
-      </div><!--/grid-->
+        </div>
+      </div>
+      <div class="container">
+        <div class="row single-content">
+        <?php if ( has_post_thumbnail() ) {?>
+          <div class="col-xs-4">
+          <?php
+            $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'story-quad' );
+          ?>
+            <img src="<?php echo $thumb['0'];?>"/>
+          </div>
+        <?php } ?>
+          <div class="col-xs-8">
+            <h3><?php the_title(); ?></h3>
+            <?php the_time('d.m.Y') ?>
+            <?php the_content(); ?>
+          </div>
+        </div><!--/row-->
+        <div class="btn-primary btn-storie" role="button">
+          <a id="formshow"><span class="caret"></span>Jetzt deine Geschichte erzählen!</a>
+          <?php get_sidebar( 'sidebar-1' ); ?>
+        </div>
+      </div><!--/container-->
+      <?php endwhile; // end of the loop. ?>
     </div><!--/stories-->
 
 <?php get_footer(); ?>
 
 
+
+      
