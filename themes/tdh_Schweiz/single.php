@@ -7,16 +7,14 @@
           <div class="col-6 col-sm-12 col-lg-6 teaser-text modul">
             <h2><?php the_title(); ?></h2>
             <?php the_content(); ?>
-            <div class="fb-share-button" data-href="<?php the_permalink() ?>"></div>
-            
           </div>
           <div class="col-6 col-sm-12 col-lg-6 teaser-call-to-action modul">
             <?php if ( has_post_thumbnail() ) {?>
-                  <?php
-                    $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'story-quad' );
-                  ?>
-                  <img src="<?php echo $thumb['0'];?>"/>
-                <?php } ?>
+              <?php
+                $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'story-quad' );
+              ?>
+              <img src="<?php echo $thumb['0'];?>"/>
+            <?php } ?>
           </div>
         </div>
       </div>

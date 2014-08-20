@@ -13,7 +13,7 @@
                       	<div class="excerpt">
                 <?php }?> 
 
-                        <?php the_content(); ?></div>
+                        <?php the_excerpt(); ?></div>
                         <p class="author"><?php the_title(); ?></p>
                       </div><!--/content-->
                     </div><!--/col-->
