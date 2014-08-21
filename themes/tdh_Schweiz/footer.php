@@ -121,7 +121,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/js/jquery-ui.css">
     <script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.10.2.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/jquery-ui.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/bootstrap/js/bootstrap.min.js"></script>
@@ -129,14 +128,23 @@
      <script>
   		$(function() {
   			var count = $("#mylist ul li").size();
-  	    $( "#slider" ).slider({ value: 1 });
-  	    $( "#slider" ).slider({ min: 1 });
-  	    $( "#slider" ).slider({ max: count });
+        var sliderRange=150;
+  	    $( "#slider" ).slider({ value: 10 });
+  	    $( "#slider" ).slider({ min: 10 });
+  	    $( "#slider" ).slider({ max: sliderRange });
+        var RangeArea = sliderRange/count;
 
   	    $( "#slider" ).slider({
   	      slide: function( event, ui ) {
-  	        $( ".activeSlide" ).toggle('fade').removeClass('activeSlide');
-  	        $("#mylist ul li:nth-child(" + ui.value + ")").toggle('fade').addClass('activeSlide');
+            var currentSlide = ui.value/RangeArea;
+            var highlight = parseInt(Math.round(currentSlide));
+            console.log(ui.value);
+
+            if (!$("li.activeSlide").is(":nth-child("+highlight+")")){
+              $( ".activeSlide" ).fadeToggle('slow').removeClass('activeSlide');
+              $("#mylist ul li:nth-child(" + highlight + ")").fadeToggle('slow').addClass('activeSlide');
+            }
+  	        
   	      }
   	    });
   		});
