@@ -13,8 +13,6 @@ This simple theme was built using the example Bootstrap theme
 
 /*Bootstrap core CSS */
 @import url('bootstrap/css/bootstrap.min.css');
-/* Bootstrap theme */
-@import url('bootstrap/css/bootstrap-theme.min.css');
 /*Bootstrap core CSS */
 @import url('fonts.css');
 
@@ -56,7 +54,7 @@ h1{
 
 h2{
 	text-transform: uppercase;
-	font-size: 40px;
+	font-size: 50px;
 	margin:0px 0px 10px;
 	font-weight: 600;
 }
@@ -543,31 +541,93 @@ input,textarea {
 	padding-bottom: 25px;
 }
 
+#projekte .btn-primary{
+	margin-top: -25px;
+	margin-bottom: 35px;
+}
+
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
+#projekte .carousel-inner .item{
+  padding: 30px 0px 55px;
+}
+#projekte .carousel-control{
+	background: #90b01d;
+	background-image:none; 
+	width: 8%;
+	opacity: 1;
+	text-decoration: none;
+}
 
+#projekte .carousel-control span{
+	opacity: 0.7;
+	position: absolute;
+	top: 50%;
+	width: 30px;
+	height: 30px;
+	margin-top: -15px;
+	font-size: 30px;
+}
+
+#projekte .carousel-control.left span{
+	margin-left: -15px;
+	left: 50%;
+}
+#projekte .carousel-control.right span{
+	margin-right: -15px;
+	right: 50%;
+}
+
+
+#projekte .carousel-control:hover span{
+	opacity: 1;
+}
 /* Carousel base class */
-.carousel {
-  height: 500px;
-  margin-bottom: 60px;
+#projekte .carousel {
+  position: relative;
+}
+
+#projekte .carousel-inner{
+  background: #f3ead5;
+  padding: 0px;
 }
 /* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  z-index: 10;
+#projekte .carousel-caption {
+	z-index: 10;
+	right: 0;
+	left: 0;
+	text-shadow: none;
+	color: #2e2d28;
+	text-align: left;
+	position: static;
+	padding: 0px;
+}
+#projekte .carousel-caption p{
+	font-size: 16px;
+	line-height: 1.6em;
+}
+#projekte .carousel-caption h5{
+	color:#ae3816;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+#projekte .carousel-caption h3{
+	color:#005c74;
+	font-size: 50px;
+	margin-bottom: 20px;
 }
 
-/* Declare heights because of positioning of img element */
-.carousel .item {
-  height: 500px;
-  background-color: blue;
+#projekte .carousel-caption img{
+	width: 100%;
 }
-.carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 500px;
+
+#projekte .carousel .quote{
+	background: white;
+	text-align: center;
+	color:#ae3816;
+	font-size: 22px;
+	padding: 20px;
 }
 
 

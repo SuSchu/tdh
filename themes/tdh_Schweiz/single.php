@@ -26,8 +26,8 @@
         <div class="container">
           <div class="row"> 
             <nav class="col-xs-12">
-              <?php previous_post_link('<p class="alignleft">&laquo; %link</p>', 'Letzte', TRUE ); ?>
-              <?php next_post_link('<p class="alignright">%link &raquo;</p>', 'Nächste', TRUE ); ?>
+              <?php previous_post_link('<p class="alignleft">&laquo; %link</p>', 'Letzte'); ?>
+              <?php next_post_link('<p class="alignright">%link &raquo;</p>', 'Nächste'); ?>
             </nav>
           </div>
         </div>

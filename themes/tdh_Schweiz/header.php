@@ -118,6 +118,7 @@
               <p>Sie bauen sich ein selbständiges Leben ohne Gewalt auf und gestalten ihre Zukunft nun selbst. Leben statt Flucht. Mutmachen lohnt sich!</p>
             </div>
           </li>
+          <li><img src="<?php bloginfo('template_directory'); ?>/img/TDH_ILLUSTRATION-big.jpg"/></li>
         </ul>
       </div>
       <div class="slider-wrapper">
