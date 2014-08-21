@@ -1,4 +1,11 @@
 -------------------------------------------------------------------------------------------------------------------
+Version 1.8.11
+
+    - Fixed issue where <col> tags were closed incorrectly generating invalid HTML markup.
+	- Fixed issue with notifications not being sent when configured with multiple email addresses.
+	- Fixed issue with legacy notifications getting marked as inactive after being edited.
+
+-------------------------------------------------------------------------------------------------------------------
 Version 1.8.10
 
     - Added gform_enable_shortcode_notification_message hook to allow for disabling shortcode processing of notification messages.

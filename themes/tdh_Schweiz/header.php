@@ -5,9 +5,10 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="BootstrapTheme Test">
+    <meta name="description" content="Terre des Hommes - Leben statt Flucht">
     <meta name="author" content="Wigwam">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico">
+    <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/js/jquery-ui.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700,600' rel='stylesheet' type='text/css'>
     <title>

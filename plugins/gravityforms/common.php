@@ -231,6 +231,21 @@ class GFCommon{
 		return filter_var( $email, FILTER_VALIDATE_EMAIL );
 	}
 
+	public static function is_valid_email_list( $email_list ) {
+		$emails = explode( ',', $email_list );
+		if ( ! is_array( $emails ) ){
+			return false;
+		}
+
+		foreach( $emails as $email ){
+			if ( ! filter_var( $email, FILTER_VALIDATE_EMAIL ) ) {
+				return false;
+			}
+		}
+
+		return true;
+	}
+
     public static function get_label($field, $input_id = 0, $input_only = false){
         return RGFormsModel::get_label($field, $input_id, $input_only);
     }
@@ -1587,7 +1602,7 @@ class GFCommon{
             $from = get_bloginfo( 'admin_email' );
         }
 
-        if( ! GFCommon::is_valid_email( $to ) ) {
+        if( ! GFCommon::is_valid_email_list( $to ) ) {
             $error = new WP_Error( 'invalid_to', 'Cannot send email because the TO address is invalid.' );
         } else if( empty( $subject ) && empty( $message ) ) {
             $error = new WP_Error( 'missing_subject_and_message', 'Cannot send email because there is no SUBJECT and no MESSAGE.' );
@@ -1611,7 +1626,7 @@ class GFCommon{
         if(GFCommon::is_valid_email($reply_to))
             $headers["Reply-To"] = "Reply-To: {$reply_to}";
 
-        if(GFCommon::is_valid_email($bcc))
+        if(GFCommon::is_valid_email_list($bcc))
             $headers["Bcc"] = "Bcc: $bcc";
 
         $headers["Content-type"] = "Content-type: {$content_type}; charset=" . get_option('blog_charset');
@@ -3917,7 +3932,7 @@ class GFCommon{
                     $colnum = 1;
                     foreach($columns as $column){
                         $odd_even = ($colnum % 2) == 0 ? "even" : "odd";
-                        $list .= "<col id='gfield_list_{$field["id"]}_col{$colnum}' class='gfield_list_col_{$odd_even}'></col>";
+                        $list .= "<col id='gfield_list_{$field["id"]}_col{$colnum}' class='gfield_list_col_{$odd_even}' />";
                         $colnum++;
                     }
                     $list .= "</colgroup>";
@@ -3929,7 +3944,7 @@ class GFCommon{
                     $list .= "<th>&nbsp;</th></tr></thead>";
                 }
                 else{
-                    $list .= "<colgroup><col id='gfield_list_{$field["id"]}_col1' class='gfield_list_col_odd'></col></colgroup>";
+                    $list .= "<colgroup><col id='gfield_list_{$field["id"]}_col1' class='gfield_list_col_odd' /></colgroup>";
                 }
 
                 $delete_display = count($value) == 1 ? "visibility:hidden;" : "";

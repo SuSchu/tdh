@@ -850,10 +850,10 @@ class GFEntryDetail{
                             <td colspan="2" class="entry-view-field-value lastrow">
                                 <table class="entry-products" cellspacing="0" width="97%">
                                     <colgroup>
-                                          <col class="entry-products-col1">
-                                          <col class="entry-products-col2">
-                                          <col class="entry-products-col3">
-                                          <col class="entry-products-col4">
+                                          <col class="entry-products-col1" />
+                                          <col class="entry-products-col2" />
+                                          <col class="entry-products-col3" />
+                                          <col class="entry-products-col4" />
                                     </colgroup>
                                     <thead>
                                         <th scope="col"><?php echo apply_filters("gform_product_{$form_id}", apply_filters("gform_product", __("Product", "gravityforms"), $form_id), $form_id) ?></th>
