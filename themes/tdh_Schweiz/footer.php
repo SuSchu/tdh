@@ -171,6 +171,13 @@
         }
       }, ".story.withImg");
 
+      if ($('#form .gform_wrapper').hasClass('gform_validation_error')){
+        $( "#formshow" ).fadeToggle( "slow", function(){
+          $( "#form" ).slideToggle( "slow");
+        });
+        $( ".btn-storie" ).addClass( "no-btn" );
+      }
+
 
       $( "#formshow" ).click(function() {
         $( "#formshow" ).fadeToggle( "slow", function(){

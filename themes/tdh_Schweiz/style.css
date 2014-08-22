@@ -379,6 +379,16 @@ margin-bottom: 35px;
 	background: #68b7da;
 }
 
+#geschichten .gform_wrapper li.gfield.gfield_error, 
+#geschichten .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning{
+	border-radius: 10px;
+	border: 1px solid #C89797;
+}
+
+#geschichten .gform_wrapper div.validation_error{
+	display: none;
+}
+
 #geschichten .title{
 	padding-bottom: 25px;
 }
