@@ -4,58 +4,35 @@
         <div class="row">
           <div class="col-xs-12 col-sm-8 col-sm-height modul">
             <div class="title">
-              <p>Werde Mutmacher!</p>
-              <h2>Spende Mut!</h2>
+              <p><?php the_field('untertitel_spende', 78); ?></p>
+              <h2><?php the_field('titel_spende', 78); ?></h2>
               <img class="logo-zewo" src="<?php bloginfo('template_directory'); ?>/img/zewo.png"/>
               
             </div>
             <div class="content">
               <div class="donate-block">
-                <h3><span class="icon-rss"></span>Online</h3>
+                <h3><span class="icon-rss"></span><?php the_field('titel_online', 78); ?></h3>
                 <div class="row">
                   <div class="col-xs-12 col-md-6 sm-hide">
                     <img src="<?php bloginfo('template_directory'); ?>/img/donate.png"/>
                   </div>
                   <div class="col-xs-12 col-md-6 ">
                     <a class="btn-primary" target="_blank" href="http://www.terredeshommesschweiz.ch/spenden/online_spenden/" role="button">Jetzt Spenden!</a>
-                    <p>
-                      Du wirst auf die terre des hommes 
-                      Spendenseite weitergeleitet. 
-                      (Spende via Postcard/Kreditkarte)
-                    </p>
+                    <?php the_field('text', 78); ?>
                   </div>
                 </div>
               </div>
               <div class="donate-block">
-                <h3><span class="icon-mobile-phone"></span>per SMS</h3>
-                <p>
-                  Einfach „MUT“ plus Spendenbeitrag an die 339 senden
-                  (Gratis-SMS, Der Betrag wird deiner nächsten 
-                  Telefonrechnung belastet.)
-                </p>
+                <h3><span class="icon-mobile-phone"></span><?php the_field('titel_sms', 78); ?></h3>
+                <?php the_field('text_sms', 78); ?>
               </div> 
               <div class="donate-block">
-                <h3><span class="icon-pencil"></span>per Überweisung</h3>
-                <p>
-                  Hilf uns Kosten sparen! 
-                  Unterstütze unsere Arbeit direkt per Online-Banking.
-                  <br />
-                  <br />
-                  <b>terre des hommes schweiz, Basel<br />
-                      Kontonummer 40-260-2<br />
-                      IBAN CH18 0900 0000 4000 0260 2 
-                  </b>
-                </p>
+                <h3><span class="icon-pencil"></span><?php the_field('titel_überweisung', 78); ?></h3>
+                <?php the_field('text_überweisung', 78); ?>
               </div> 
               <div class="donate-block schein">
-                <h3><span class="icon-envelope-o"></span>per Einzahlungsschein</h3>
-                <p>
-                  Sende uns deine Postadresse per 
-                  <a href="mailto:einzahlung@terredeshommesschweiz.ch?Subject=Spenden%20per%20Einzahlungsschein" target="_top">
-                  E-Mail</a>
-                   und wir schicken 
-                  dir umgehend einen Einzahlungsschein.
-                </p>
+                <h3><span class="icon-envelope-o"></span><?php the_field('titel_schein', 78); ?></h3>
+                <?php the_field('text_schein', 78); ?>
               </div>          
             </div>
           </div>
@@ -63,18 +40,10 @@
             <div class="content">
               <p class="first">first line</p>
               <img src="<?php bloginfo('template_directory'); ?>/img/donate-happygirl.png"/>
-              <h4>Deine Spende macht Mut!</h4>
-              <p>Deine Spende macht Mut!
-                  Du unterstützt mit deiner 
-                  Spende Kinder und Jugendliche 
-                  darin, ihr Leben selbst in 
-                  die Hand zu nehmen. 
-                  Danke, dass du ihnen die 
-                  Chance auf eine bessere 
-                  Zukunft schenkst. 
-              </p>
+              <h4><?php the_field('titel_danke', 78); ?></h4>
+              <p><?php the_field('text_danke', 78); ?></p>
               <img src="<?php bloginfo('template_directory'); ?>/img/Unterschrift-Valentin.png"/>
-              <p>Sonja Valentin</p>
+              <p><?php the_field('name_danke', 78); ?></p>
             </div>
           </div> 
         </div>           
@@ -93,24 +62,17 @@
             	</p>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-4">
-            	<h5>terre des hommes schweiz</h5>
-            	<p>Laufenstrasse 12<br />
-            		CH - 4018 Basel
-            	</p>
-            	<p>+41 61 338 91 38<br />
-                <a href="mailto:info@terredeshommes.ch" target="_top">
-                  info(at)terredeshommes.ch</a>
-            	</p>
-
+            	<h5><?php the_field('titel_adresse', 78); ?></h5>
+            	<p><?php the_field('adresse', 78); ?></p>
+            	<p>
+                <?php the_field('telefonnummer', 78); ?><br />
+                <?php the_field('emailadresse', 78); ?>
+              </p>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-4">
-            	<h5>Kontoinformationen</h5>
-            	<p>Postkonto 40-260-2<br />
-            		IBAN: CH18 0900 0000 4000 0260 2
-            	</p>
-            	<p><br />
-            		<a href="http://www.terredeshommesschweiz.ch/" target="_blank" alt="terre des hommes Schweiz Webseite">www.terredeshommesschweiz.ch</a>
-            	</p>
+            	<h5><?php the_field('titel_konto', 78); ?></h5>
+            	<p><?php the_field('konto', 78); ?></p>
+            	<p><a href="http://www.terredeshommesschweiz.ch/" target="_blank" alt="terre des hommes Schweiz Webseite">www.terredeshommesschweiz.ch</a></p>
             </div>
         </div>
       </div>

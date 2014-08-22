@@ -66,57 +66,57 @@
           <li>
             <img src="<?php bloginfo('template_directory'); ?>/img/TDH_ILLUSTRATION_step1-big.jpg"/>
             <div class="textbox step1">
-              <h2>Auf und davon</h2>
-              <p>Viele Jugendliche verlassen ihren Herkunftsort, um anderswo eine Arbeit zu finden. Mädchen finden oft eine Anstellung als Hausangestellte, wo sie unter sehr harten Bedingungen arbeiten. Manche Mädchen und junge Frauen wollen aber auch Armut und Gewalt an ihrem Heimatort entkommen, und entschliessen sich deshalb, wegzugehen.</p>
+              <h2><?php the_field('figur_1_titel', 78); ?></h2>
+              <p><?php the_field('figur_1_text', 78); ?></p>
             </div>
           </li>
           <li>
             <img src="<?php bloginfo('template_directory'); ?>/img/TDH_ILLUSTRATION_step4-big.jpg"/>
             <div class="textbox step4">
-              <h2>Den Mut aufbringen</h2>
-              <p>Es braucht viel Mut, sich aus diesen schwierigen Situationen zu befreien. Mut alleine reicht jedoch nicht.</p>
+              <h2><?php the_field('figur_4_titel', 78); ?></h2>
+              <p><?php the_field('figur_4_text', 78); ?></p>       
             </div>
           </li>
           <li>
             <img src="<?php bloginfo('template_directory'); ?>/img/TDH_ILLUSTRATION_step5-big.jpg"/>
             <div class="textbox step5">
-              <h2>Ein sicherer Ort</h2>
-              <p>Wichtig sind Anlaufstellen für Mädchen und junge Frauen, die Gewalt und Ausbeutung erleben. Sie sind ein sicherer Ort, wo die Jugendlichen Schutz finden, Unterstützung erhalten und sich mit Gleichaltrigen austauschen können.</p>
+              <h2><?php the_field('figur_5_titel', 78); ?></h2>
+              <p><?php the_field('figur_5_text', 78); ?></p>
             </div>
           </li>
           <li>
             <img src="<?php bloginfo('template_directory'); ?>/img/TDH_ILLUSTRATION_step6-big.jpg"/>
             <div class="textbox step6">
-              <h2>Psychologische Betreuung</h2>
-              <p>Die Mädchen und jungen Frauen erhalten dort zunächst psychologische Betreuung. Das hilft ihnen, Traumata zu überwinden und ihr Selbstbewusstsein zu stärken. Dies ist die Voraussetzung dafür, dass sie ihr Leben in die Hand nehmen können.</p>
+              <h2><?php the_field('figur_6_titel', 78); ?></h2>
+              <p><?php the_field('figur_6_text', 78); ?></p>
             </div>
           </li>
           <li>
             <img src="<?php bloginfo('template_directory'); ?>/img/TDH_ILLUSTRATION_step7-big.jpg"/>
             <div class="textbox step7">
-              <h2>Die eigenen Fähigkeiten kennen</h2>
-              <p>In einem weiteren Schritt können die Jugendlichen ihre Kompetenzen erweitern. Sie können Workshops besuchen, merken, welches ihre Stärken und Fähigkeiten sind und lernen ihre Rechte kennen.</p>
+              <h2><?php the_field('figur_7_titel', 78); ?></h2>
+              <p><?php the_field('figur_7_text', 78); ?></p>
             </div>
           </li>
           <li>
             <img src="<?php bloginfo('template_directory'); ?>/img/TDH_ILLUSTRATION_step9-big.jpg"/>
             <div class="textbox step9">
-              <h2>Einkommen schaffen</h2>
-              <p>Dazu gehört auch das Erlernen eines praktischen Handwerkes und das Wissen, wie man sich ein kleines Geschäft aufbaut. Den Mädchen und jungen Frauen wird Mut gemacht, Projekte umzusetzen und sich ein eigenes Einkommen zu schaffen.</p>
+              <h2><?php the_field('figur_9_titel', 78); ?></h2>
+              <p><?php the_field('figur_9_text', 78); ?></p>
             </div>
           </li>
           <li>
             <img src="<?php bloginfo('template_directory'); ?>/img/TDH_ILLUSTRATION_step10-big.jpg"/>
-            <div class="textbox step1">
-              <h2>In kleinen Schritten in die Unabhängigkeit</h2>
-              <p>Die Mädchen und jungen Frauen können Erfahrungen sammeln und werden Schritt für Schritt in die Unabhängigkeit begleitet.</p>
+            <div class="textbox step11">
+              <h2><?php the_field('figur_11_titel', 78); ?></h2>
+              <p><?php the_field('figur_11_text', 78); ?></p>
             </div>
           </li>
           <li>
             <img src="<?php bloginfo('template_directory'); ?>/img/TDH_ILLUSTRATION_step11-big.jpg"/>
-            <div class="textbox step1">
-              <h2>Mutig in die Zukunft</h2>
-              <p>Sie bauen sich ein selbständiges Leben ohne Gewalt auf und gestalten ihre Zukunft nun selbst. Leben statt Flucht. Mutmachen lohnt sich!</p>
+            <div class="textbox step12">
+              <h2><?php the_field('figur_12_titel', 78); ?></h2>
+              <p><?php the_field('figur_12_text', 78); ?></p>
             </div>
           </li>
           <li><img src="<?php bloginfo('template_directory'); ?>/img/TDH_ILLUSTRATION-big.jpg"/></li>
