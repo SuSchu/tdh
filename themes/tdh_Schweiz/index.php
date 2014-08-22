@@ -24,7 +24,7 @@
             <?php the_field('vorschau_text_box_1', 78); ?>
             <a class="btn-more" role="button">mehr erfahren</a>
             <div class="moreText"><?php the_field('nachgeladener_text_box_1', 78); ?></div>
-            <a target="_blank" href="<?php the_field('action_button_link_box_1', 78); ?>" class="btn-primary" role="button"><span class="caret"></span>
+            <a href="<?php the_field('action_button_link_box_1', 78); ?>" class="btn-primary" role="button"><span class="caret"></span>
               <?php the_field('action_button_text_box_1', 78); ?>
             </a>
 
