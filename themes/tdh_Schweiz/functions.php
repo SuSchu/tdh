@@ -44,17 +44,44 @@ if ( function_exists( 'add_image_size' ) ) {
 function ik_send_email($post_id){
 	//get e-mail address from post meta field
 	$email_address = get_post_meta($post_id, 'email', true);
+	$post_url = get_permalink($post_id);
+	$name = get_the_title($post_id);
  
-	$subject = "Your Subject Here!";
-	$body = "Thank you for your submission!  Your story has been approved!";
+	$subject = "Bestätigung: Leben statt Flucht - Deine Mutgeschichte";
+	$body = "Guten Tag".$name."
+Du hast vor kurzem deine Mutmacher-Geschichte mit terre des hommes schweiz auf www.lebenstattflucht.ch geteilt. Sie ist jetzt online. Du findest sie unter diesem ".$post_url.", wo Du sie auch weiterverbreiten kannst. Schicke sie zum Beispiel deinem Mutmacher / deiner Mutmacherin. 
+
+Danke dass Du mitgemacht hast!
+
+Hilf uns dabei, Jugendliche dabei zu unterstützen, sich ein Leben ohne Gewalt und Armut aufzubauen. Spende Mut!
+
+Weitere Informationen findest Du auf unserer Webseite www.terredeshommesschweiz.ch
+
+Mit herzlichen Grüssen
+terre des hommes schweiz
+
+ps: falls Du keine Geschichte auf www.lebenstattflucht.h gepostet hast,  melde Dich bitte umgehend bei info@terredeshommes.ch
+
+---------------------------------------------------
+terre des hommes schweiz
+Laufenstrasse 12
+4018 Basel
+
+Telefon +41 61 338 91 38";
  
 	//use this to set the From address of the e-mail
-	$headers = 'From: From Address <susan@wigwam.im>' . "\r\n";
+	$header  = "MIME-Version: 1.0\r\n";
+	$header .= "Content-type: text/html; charset=iso-8859-1\r\n";
+	 
+	$header .= "From: terres des hommes schweiz <s.valentin@terredeshommes.ch>\r\n";
+	$header .= "Reply-To: terres des hommes schweiz <s.valentin@terredeshommes.ch>\r\n";
+	// $header .= "Cc: $cc\r\n";  // falls an CC gesendet werden soll
+	$header .= "X-Mailer: PHP ". phpversion();
  
 	if(wp_mail($email_address, $subject, $body, $headers)){
-		//mail sent!
+		echo "Mail wurde gesendet!";
 	} else {
-		//failure!
+		echo "Mail wurde nicht gesendet!";
 	}
 }
 add_action('publish_post','ik_send_email');
