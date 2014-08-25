@@ -14,7 +14,7 @@
                 <?php }?> 
 
                         <?php the_excerpt(); ?></div>
-                        <p class="author"><?php the_title(); ?>,<?php echo get_post_meta($post->ID, 'wohnort', true); ?> </p>
+                        <p class="author"><?php the_title(); ?></p>
                       </div><!--/content-->
                     </div><!--/col-->
                   </a>

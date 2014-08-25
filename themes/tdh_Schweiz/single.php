@@ -44,7 +44,7 @@
         <?php } ?>
           <div class="col-xs-8">
             <h3><?php the_title(); ?></h3>
-            <?php the_time('d.m.Y') ?>
+            <?php the_time('d.m.Y') ?>, <?php echo get_post_meta($post->ID, 'wohnort', true); ?>
             <?php the_content(); ?>
           </div>
         </div><!--/row-->
