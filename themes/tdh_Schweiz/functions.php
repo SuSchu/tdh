@@ -48,7 +48,7 @@ function ik_send_email($post_id){
 	$name = get_the_title($post_id);
  
 	$subject = "Bestätigung: Leben statt Flucht - Deine Mutgeschichte";
-	$body = "Guten Tag".$name."
+	$body = "Guten Tag ".$name.".
 Du hast vor kurzem deine Mutmacher-Geschichte mit terre des hommes schweiz auf www.lebenstattflucht.ch geteilt. Sie ist jetzt online. Du findest sie unter diesem ".$post_url.", wo Du sie auch weiterverbreiten kannst. Schicke sie zum Beispiel deinem Mutmacher / deiner Mutmacherin. 
 
 Danke dass Du mitgemacht hast!
@@ -69,14 +69,8 @@ Laufenstrasse 12
 
 Telefon +41 61 338 91 38";
  
-	//use this to set the From address of the e-mail
-	$header  = "MIME-Version: 1.0\r\n";
-	$header .= "Content-type: text/html; charset=iso-8859-1\r\n";
 	 
-	$header .= "From: terres des hommes schweiz <s.valentin@terredeshommes.ch>\r\n";
-	$header .= "Reply-To: terres des hommes schweiz <s.valentin@terredeshommes.ch>\r\n";
-	// $header .= "Cc: $cc\r\n";  // falls an CC gesendet werden soll
-	$header .= "X-Mailer: PHP ". phpversion();
+	$header = "From: terres des hommes schweiz <s.valentin@terredeshommes.ch>\r\n";
  
 	if(wp_mail($email_address, $subject, $body, $headers)){
 		echo "Mail wurde gesendet!";

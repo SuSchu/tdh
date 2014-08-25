@@ -1,6 +1,15 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?>
+xmlns:og="http://opengraphprotocol.org/schema/"
+xmlns:fb="http://www.facebook.com/2008/fbml">
   <head>
+
+    <!-- Facebook Meta Data -->
+    <meta property="og:image" content="<?php bloginfo('template_directory'); ?>/img/TDH_ILLUSTRATION-mini.jpg"/>
+    <meta property="og:locality" content="Berlin"/>
+    <meta property="og:country-name" content="Germany"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Terre des Hommes - Leben statt Flucht Kampagne"/>
 
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,9 +19,8 @@
     <link rel="icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico">
     <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/js/jquery-ui.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700,600' rel='stylesheet' type='text/css'>
-    <title>
-      <?php
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600|Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+       <?php
       /*
        * Print the <title> tag based on what is being viewed.
        */
