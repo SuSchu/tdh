@@ -54,10 +54,39 @@
       </div>
       <div class="grid">
         <div class="container">
-          <div class="row">
+          <div class="row myquery">
+            <?php $my_query = new WP_Query( 'category_name=highlightstories' ); ?>
+            <?php $countHigh = 0;?>
+
+          <?php while ( $my_query->have_posts() ) : $my_query->the_post(); ?>
+
+            <?php $countHigh = $countHigh + 1;
+            if ( has_post_thumbnail() ) {?>
+                  <?php
+                    $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'story-quad' );
+                  ?>
+                  <a id="content" href="<?php the_permalink() ?>" >
+                    <div class="col-6 col-xs-6 col-md-4 story withImg" style="background-image: url(<?php echo $thumb[0]; ?>);">
+                      <div class="content down">
+                        <div class="excerpt" style="height:8%;">
+                <?php } else { ?>
+                  <a id="content" href="<?php the_permalink() ?>" >
+                    <div class="col-6 col-xs-6 col-md-4 story">
+                      <div class="content">
+                        <div class="excerpt">
+                <?php }?> 
+
+                        <?php the_excerpt(); ?></div>
+                        <p class="author"><?php the_title(); ?></p>
+                      </div><!--/content-->
+                    </div><!--/col-->
+                  </a>
+          <?php endwhile; 
+          $countExt= 6 - $countHigh;
+          ?>
 
             <?php 
-            echo do_shortcode('[ajax_load_more post_type="post" posts_per_page="6" scroll="false" button_label="Mehr Geschichten laden"]');
+            echo do_shortcode('[ajax_load_more post_type="post" category="extern-stories" posts_per_page="'.$countExt.'" scroll="false" button_label="Mehr Geschichten laden"]');
             ?>
           </div><!--/row-->
           <div class="btn-primary btn-storie" role="button">
