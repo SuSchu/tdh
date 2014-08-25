@@ -44,15 +44,8 @@ a{
 	text-decoration: underline;
 }
 
-h1{
-	font-size: 60px;
-	color: white;
-	text-transform: uppercase;
-	margin:0px 0px 10px;
-	font-weight: 600;
-}
 
-h2{
+h2, h1{
 	text-transform: uppercase;
 	font-size: 50px;
 	margin:0px 0px 10px;
@@ -199,6 +192,11 @@ ul{
     
 }
 
+#mylist.mini{
+	display: none;
+}
+
+
 #slider{
 	width: 297px;
 	display: block;
@@ -262,6 +260,10 @@ ul{
 	border-radius: 0px;
 	border:0px;
 }
+.navbar-collapse{
+	border-top: 0px;
+	box-shadow: none;
+}
 
 .navbar-button {
 	display: inline-block;
@@ -270,6 +272,13 @@ ul{
 	font-size: 18px;
 	color: #013641;
 	text-shadow: none;
+}
+
+.navbar-button.menu{
+	display: none;
+	cursor: pointer;
+	float: none;
+
 }
 
 .navbar-button a,
@@ -575,12 +584,13 @@ input,textarea {
   padding: 30px 0px 55px;
 }
 #projekte .carousel-control{
-	background: #90b01d;
+	background: transparent;
 	background-image:none; 
-	width: 8%;
+	width: 50%;
 	opacity: 1;
 	text-decoration: none;
 }
+
 
 #projekte .carousel-control span{
 	opacity: 0.7;
@@ -593,12 +603,10 @@ input,textarea {
 }
 
 #projekte .carousel-control.left span{
-	margin-left: -15px;
-	left: 50%;
+	left: 30px;
 }
 #projekte .carousel-control.right span{
-	margin-right: -15px;
-	right: 50%;
+	right: 30px;
 }
 
 
@@ -608,6 +616,7 @@ input,textarea {
 /* Carousel base class */
 #projekte .carousel {
   position: relative;
+  background: #94b61e;
 }
 
 #projekte .carousel-inner{
@@ -769,8 +778,63 @@ input,textarea {
 
 }
 
+@media (max-width: 767px) {
+	.navbar-button.menu{
+		display: inline-block;
+	}
+}
+
+@media (max-width: 540px) {
+	.navbar-nav>li{
+		display: block;
+	}
+}
+
+
+
+@media (max-width: 884px) {
+
+	#projekte .carousel-control.right span {
+		margin-right: 30px; 
+		right: 0%; 
+		float: right;
+	}
+	#projekte .carousel-control.left span {
+		margin-left: 30px; 
+		left: 0%; 
+		float: left;
+	}
+
+	#projekte .carousel-control span {
+		top:25px;
+	}
+
+	#projekte .carousel-inner .item {
+		padding: 55px 0px 55px;
+	}
+}
+
+@media (max-width: 1400px) {
+	h1{
+		font-size: 32px;
+	}
+}
+
+@media (max-width: 1110px) {
+	#mylist.normal, 
+	.slider-wrapper{
+		display: none;
+	}
+	#mylist.mini{
+		display: block;
+	}
+}
+
 /*bis 992*/
 @media (max-width: 991px) {
+
+
+
 	.story{
   		padding-bottom: 50%;
   	}
@@ -785,6 +849,13 @@ input,textarea {
 }
 /*bis 500*/
 @media (max-width: 500px) {
+
+	#projekte .carousel-control.right span {
+		margin-right: 10px; 
+	}
+	#projekte .carousel-control.left span {
+		margin-left: 10px; 
+	}
 	.story{
   		padding-bottom: 100%;
   		width: 100%;
@@ -811,6 +882,9 @@ input,textarea {
 	}
 	h2{
 		font-size: 30px;
+	}
+	h3{
+		font-size: 20px;
 	}
 	.modul {
 		padding: 35px 0px;

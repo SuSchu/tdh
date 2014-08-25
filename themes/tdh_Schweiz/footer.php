@@ -170,6 +170,10 @@
         }
       }); 
 
+      $('.navbar-button.menu').click(function(){
+        $('.navbar-collapse.collapse').fadeToggle();
+      });
+
  
     
 			

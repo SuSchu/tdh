@@ -3,7 +3,7 @@
     <!-- Fixed navbar -->
     <div id="affix-menu" class="navbar" role="navigation">
       <div class="container">
-          <div class="navbar-button">
+          <div class="navbar-button menu">
             <span class="icon-align-justify"></span>
           </div>
           <div class="navbar-collapse collapse">
