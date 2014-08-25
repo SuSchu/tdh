@@ -34,7 +34,7 @@
       </div>
       <div class="container">
         <div class="row single-content">
-        <?php if ( has_post_thumbnail() && !has_category( 4, $post->ID )) {?>
+        <?php if ( has_post_thumbnail() && !has_category( 'mitvideo', $post->ID )) {?>
           <div class="col-xs-4">
           <?php
             $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'story-quad' );
