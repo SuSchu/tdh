@@ -29,6 +29,7 @@ if ( function_exists('register_sidebar') ){
 
 //register custom field at posts
 get_post_meta($post_id, '$email', $single);
+get_post_meta($post_id, '$wohnort', $single);
 
 //add image sizes
 if ( function_exists( 'add_image_size' ) ) { 
