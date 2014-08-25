@@ -18,7 +18,7 @@
       <?php while ( have_posts() ) : the_post(); ?>
       <div class="container">
         <div class="row">
-          <div class="col-xs-8">
+          <div class="col-xs-12 col-sm-8">
             <?php the_content(); ?>
           </div>
         </div><!--/row-->
