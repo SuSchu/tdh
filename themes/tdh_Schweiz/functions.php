@@ -27,6 +27,11 @@ if ( function_exists('register_sidebar') ){
 	) );
 }
 
+function videoembeded($atts, $content = null) {
+	return '<div class="videoembeded">' . $content . '</div>';
+}
+add_shortcode('video', 'videoembeded');
+
 //register custom field at posts
 get_post_meta($post_id, '$email', $single);
 get_post_meta($post_id, '$wohnort', $single);

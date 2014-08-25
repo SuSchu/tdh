@@ -34,19 +34,25 @@
       </div>
       <div class="container">
         <div class="row single-content">
-        <?php if ( has_post_thumbnail() ) {?>
+        <?php if ( has_post_thumbnail() && !has_category( 4, $post->ID )) {?>
           <div class="col-xs-4">
           <?php
             $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'story-quad' );
           ?>
             <img src="<?php echo $thumb['0'];?>"/>
           </div>
-        <?php } ?>
           <div class="col-xs-8">
+        <?php } else{ ?>
+          <div class="col-xs-12">
+        <?php } ?>
+          
             <h3><?php the_title(); ?></h3>
             <?php the_time('d.m.Y') ?>, <?php echo get_post_meta($post->ID, 'wohnort', true); ?>
             <?php the_content(); ?>
           </div>
+
+       
+         
         </div><!--/row-->
         <div class="btn-primary btn-storie" role="button">
           <a id="formshow"><span class="caret"></span>Jetzt deine Geschichte erzählen!</a>
