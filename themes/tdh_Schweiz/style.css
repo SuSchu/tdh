@@ -25,6 +25,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1.6em;
+  margin-top: -25px;
 }
 
 .modul{
@@ -190,6 +191,8 @@ ul{
 
 #header{
 	position: relative;
+	display: block;
+	padding-bottom: 5px;
 }
 
 #mylist{
@@ -265,6 +268,9 @@ ul{
 	margin:0px;
 	border-radius: 0px;
 	border:0px;
+	position: absolute;
+	z-index: 99;
+	width: 100%;
 }
 .navbar-collapse{
 	border-top: 0px;
@@ -366,6 +372,7 @@ a.back-link span{
 
 #kampagne{
 	background: #006d8a;
+	padding-top: 50px;
 }
 .teaser-box1 .btn-more,
 .teaser-box2 .btn-more{
@@ -590,14 +597,25 @@ input,textarea {
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 #projekte .carousel-inner .item{
-  padding: 30px 0px 55px;
+  padding: 30px 60px 55px;
 }
 #projekte .carousel-control{
-	background: transparent;
+	background: #94b61e;
 	background-image:none; 
-	width: 50%;
+	width: 30px;
 	opacity: 1;
 	text-decoration: none;
+}
+#projekte .carousel-indicators li{
+	border-color: #94b61e;
+}
+
+#projekte .carousel-indicators li{
+	border-color: #94b61e;
+}
+
+#projekte .carousel-indicators .active{
+	background-color: #94b61e;
 }
 
 
@@ -612,10 +630,10 @@ input,textarea {
 }
 
 #projekte .carousel-control.left span{
-	left: 30px;
+	left: 0px;
 }
 #projekte .carousel-control.right span{
-	right: 30px;
+	right: 0px;
 }
 
 
@@ -851,6 +869,9 @@ input,textarea {
 	}
 	#mylist.mini{
 		display: block;
+	}
+	#header{
+		padding-bottom: 0px;
 	}
 }
 

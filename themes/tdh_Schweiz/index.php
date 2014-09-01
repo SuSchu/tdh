@@ -65,12 +65,12 @@
                   <?php
                     $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'story-quad' );
                   ?>
-                  <a id="content" href="<?php the_permalink() ?>" >
+                  <a id="content" href="<?php the_permalink() ?>/#geschichten" >
                     <div class="col-6 col-xs-6 col-md-4 story withImg" style="background-image: url(<?php echo $thumb[0]; ?>);">
                       <div class="content down">
                         <div class="excerpt" style="height:8%;">
                 <?php } else { ?>
-                  <a id="content" href="<?php the_permalink() ?>" >
+                  <a id="content" href="<?php the_permalink() ?>/#geschichten" >
                     <div class="col-6 col-xs-6 col-md-4 story">
                       <div class="content">
                         <div class="excerpt">
@@ -117,110 +117,103 @@
           <li data-target="#myCarousel" data-slide-to="3"></li>
         </ol>
         <div class="carousel-inner container">
+          
           <div class="item active">
-            <div class="container">
-              <div class="row">
-                <div class="carousel-caption">
-                  <div class="col-xs-12 col-sm-6">
-                    <?php if( get_field('bild_projekt_1', 78) ): ?>
-                      <img src="<?php the_field('bild_projekt_1', 78); ?>" />
-                    <?php endif; ?>
-                    <h3><?php the_field('titel_projekt_1', 78); ?></h3>
-                    <h5><?php the_field('titel_textbox1_projekt_1', 78); ?></h5>
-                    <div><?php the_field('textbox1_projekt_1', 78); ?></div> 
-                  </div>
-                  <div class="col-xs-12 col-sm-6">
-                    <h5><?php the_field('titel_textbox1_projekt_1', 78); ?></h5>
-                    <div><?php the_field('textbox2_projekt_1', 78); ?></div>
-                    <p class="quote"><?php the_field('highlightbox_projekt_1', 78); ?></p>
-                    <a target="_blank" href="<?php the_field('action_button_link_projekt_1', 78); ?>" class="btn-primary" role="button">
-                      <span class="caret"></span><?php the_field('action_button_text_projekt_1', 78); ?>
-                    </a>
-                    <div><?php the_field('textbox3_projekt_1', 78); ?></div>
-                  </div>
+            <div class="row">
+              <div class="carousel-caption">
+                <div class="col-xs-12 col-sm-6">
+                  <?php if( get_field('bild_projekt_1', 78) ): ?>
+                    <img src="<?php the_field('bild_projekt_1', 78); ?>" />
+                  <?php endif; ?>
+                  <h3><?php the_field('titel_projekt_1', 78); ?></h3>
+                  <h5><?php the_field('titel_textbox1_projekt_1', 78); ?></h5>
+                  <div><?php the_field('textbox1_projekt_1', 78); ?></div> 
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <h5><?php the_field('titel_textbox1_projekt_1', 78); ?></h5>
+                  <div><?php the_field('textbox2_projekt_1', 78); ?></div>
+                  <p class="quote"><?php the_field('highlightbox_projekt_1', 78); ?></p>
+                  <a target="_blank" href="<?php the_field('action_button_link_projekt_1', 78); ?>" class="btn-primary" role="button">
+                    <span class="caret"></span><?php the_field('action_button_text_projekt_1', 78); ?>
+                  </a>
+                  <div><?php the_field('textbox3_projekt_1', 78); ?></div>
                 </div>
               </div>
             </div>
           </div>
           <div class="item">
-            <div class="container">
-              <div class="row">
-                <div class="carousel-caption">
-                  <div class="col-xs-12 col-sm-6">
-                    <?php if( get_field('bild_projekt_2', 78) ): ?>
-                      <img src="<?php the_field('bild_projekt_2', 78); ?>" />
-                    <?php endif; ?>
-                    <h3><?php the_field('titel_projekt_2', 78); ?></h3>
-                    <h5><?php the_field('titel_textbox1_projekt_2', 78); ?></h5>
-                    <div><?php the_field('textbox1_projekt_2', 78); ?></div> 
-                  </div>
-                  <div class="col-xs-12 col-sm-6">
-                    <h5><?php the_field('titel_textbox1_projekt_2', 78); ?></h5>
-                    <div><?php the_field('textbox2_projekt_2', 78); ?></div>
-                    <p class="quote"><?php the_field('highlightbox_projekt_2', 78); ?></p>
-                    <a target="_blank" href="<?php the_field('action_button_link_projekt_2', 78); ?>" class="btn-primary" role="button">
-                      <span class="caret"></span><?php the_field('action_button_text_projekt_2', 78); ?>
-                    </a>
-                    <div><?php the_field('textbox3_projekt_2', 78); ?></div>
-                  </div>
+            <div class="row">
+              <div class="carousel-caption">
+                <div class="col-xs-12 col-sm-6">
+                  <?php if( get_field('bild_projekt_2', 78) ): ?>
+                    <img src="<?php the_field('bild_projekt_2', 78); ?>" />
+                  <?php endif; ?>
+                  <h3><?php the_field('titel_projekt_2', 78); ?></h3>
+                  <h5><?php the_field('titel_textbox1_projekt_2', 78); ?></h5>
+                  <div><?php the_field('textbox1_projekt_2', 78); ?></div> 
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <h5><?php the_field('titel_textbox1_projekt_2', 78); ?></h5>
+                  <div><?php the_field('textbox2_projekt_2', 78); ?></div>
+                  <p class="quote"><?php the_field('highlightbox_projekt_2', 78); ?></p>
+                  <a target="_blank" href="<?php the_field('action_button_link_projekt_2', 78); ?>" class="btn-primary" role="button">
+                    <span class="caret"></span><?php the_field('action_button_text_projekt_2', 78); ?>
+                  </a>
+                  <div><?php the_field('textbox3_projekt_2', 78); ?></div>
                 </div>
               </div>
             </div>
           </div>
           <div class="item">
-            <div class="container">
-              <div class="row">
-                <div class="carousel-caption">
-                  <div class="col-xs-12 col-sm-6">
-                    <?php if( get_field('bild_projekt_3', 78) ): ?>
-                      <img src="<?php the_field('bild_projekt_3', 78); ?>" />
-                    <?php endif; ?>
-                    <h3><?php the_field('titel_projekt_3', 78); ?></h3>
-                    <h5><?php the_field('titel_textbox1_projekt_3', 78); ?></h5>
-                    <div><?php the_field('textbox1_projekt_3', 78); ?></div> 
-                  </div>
-                  <div class="col-xs-12 col-sm-6">
-                    <h5><?php the_field('titel_textbox1_projekt_3', 78); ?></h5>
-                    <div><?php the_field('textbox2_projekt_3', 78); ?></div>
-                    <p class="quote"><?php the_field('highlightbox_projekt_3', 78); ?></p>
-                    <a target="_blank" href="<?php the_field('action_button_link_projekt_3', 78); ?>" class="btn-primary" role="button">
-                      <span class="caret"></span><?php the_field('action_button_text_projekt_3', 78); ?>
-                    </a>
-                    <div><?php the_field('textbox3_projekt_3', 78); ?></div>
-                  </div>
+            <div class="row">
+              <div class="carousel-caption">
+                <div class="col-xs-12 col-sm-6">
+                  <?php if( get_field('bild_projekt_3', 78) ): ?>
+                    <img src="<?php the_field('bild_projekt_3', 78); ?>" />
+                  <?php endif; ?>
+                  <h3><?php the_field('titel_projekt_3', 78); ?></h3>
+                  <h5><?php the_field('titel_textbox1_projekt_3', 78); ?></h5>
+                  <div><?php the_field('textbox1_projekt_3', 78); ?></div> 
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <h5><?php the_field('titel_textbox1_projekt_3', 78); ?></h5>
+                  <div><?php the_field('textbox2_projekt_3', 78); ?></div>
+                  <p class="quote"><?php the_field('highlightbox_projekt_3', 78); ?></p>
+                  <a target="_blank" href="<?php the_field('action_button_link_projekt_3', 78); ?>" class="btn-primary" role="button">
+                    <span class="caret"></span><?php the_field('action_button_text_projekt_3', 78); ?>
+                  </a>
+                  <div><?php the_field('textbox3_projekt_3', 78); ?></div>
                 </div>
               </div>
             </div>
           </div>
           <div class="item">
-            <div class="container">
-              <div class="row">
-                <div class="carousel-caption">
-                  <div class="col-xs-12 col-sm-6">
-                    <?php if( get_field('bild_projekt_4', 78) ): ?>
-                      <img src="<?php the_field('bild_projekt_4', 78); ?>" />
-                    <?php endif; ?>
-                    <h3><?php the_field('titel_projekt_4', 78); ?></h3>
-                    <h5><?php the_field('titel_textbox1_projekt_4', 78); ?></h5>
-                    <div><?php the_field('textbox1_projekt_4', 78); ?></div> 
-                  </div>
-                  <div class="col-xs-12 col-sm-6">
-                    <h5><?php the_field('titel_textbox1_projekt_4', 78); ?></h5>
-                    <div><?php the_field('textbox2_projekt_4', 78); ?></div>
-                    <p class="quote"><?php the_field('highlightbox_projekt_4', 78); ?></p>
-                    <a target="_blank" href="<?php the_field('action_button_link_projekt_4', 78); ?>" class="btn-primary" role="button">
-                      <span class="caret"></span><?php the_field('action_button_text_projekt_4', 78); ?>
-                    </a>
-                    <div><?php the_field('textbox3_projekt_4', 78); ?></div>
-                  </div>
+            <div class="row">
+              <div class="carousel-caption">
+                <div class="col-xs-12 col-sm-6">
+                  <?php if( get_field('bild_projekt_4', 78) ): ?>
+                    <img src="<?php the_field('bild_projekt_4', 78); ?>" />
+                  <?php endif; ?>
+                  <h3><?php the_field('titel_projekt_4', 78); ?></h3>
+                  <h5><?php the_field('titel_textbox1_projekt_4', 78); ?></h5>
+                  <div><?php the_field('textbox1_projekt_4', 78); ?></div> 
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <h5><?php the_field('titel_textbox1_projekt_4', 78); ?></h5>
+                  <div><?php the_field('textbox2_projekt_4', 78); ?></div>
+                  <p class="quote"><?php the_field('highlightbox_projekt_4', 78); ?></p>
+                  <a target="_blank" href="<?php the_field('action_button_link_projekt_4', 78); ?>" class="btn-primary" role="button">
+                    <span class="caret"></span><?php the_field('action_button_text_projekt_4', 78); ?>
+                  </a>
+                  <div><?php the_field('textbox3_projekt_4', 78); ?></div>
                 </div>
               </div>
             </div>
           </div>
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="icon-chevron-left"></span></a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="icon-chevron-right"></span></a>
+    
         </div>
-
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="icon-chevron-left"></span></a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="icon-chevron-right"></span></a>
       </div><!-- /.carousel -->
     </div>
 

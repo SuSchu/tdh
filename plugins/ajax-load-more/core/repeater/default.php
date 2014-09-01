@@ -2,12 +2,12 @@
                   <?php
                     $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'story-quad' );
                   ?>
-                  <a id="content" href="<?php the_permalink() ?>" >
+                  <a id="content" href="<?php the_permalink() ?>/#geschichten" >
                     <div class="col-6 col-xs-6 col-md-4 story withImg" style="background-image: url(<?php echo $thumb[0]; ?>);">
                       <div class="content down">
                       	<div class="excerpt" style="height:8%;">
                 <?php } else { ?>
-                  <a id="content" href="<?php the_permalink() ?>" >
+                  <a id="content" href="<?php the_permalink() ?>/#geschichten" >
                     <div class="col-6 col-xs-6 col-md-4 story">
                       <div class="content">
                       	<div class="excerpt">
