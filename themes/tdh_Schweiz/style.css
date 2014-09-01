@@ -597,7 +597,7 @@ input,textarea {
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 #projekte .carousel-inner .item{
-  padding: 30px 60px 55px;
+  padding: 30px 30px 55px;
 }
 #projekte .carousel-control{
 	background: #94b61e;
@@ -629,11 +629,15 @@ input,textarea {
 	font-size: 30px;
 }
 
+#projekte .carousel .container{
+	position: relative;
+}
+
 #projekte .carousel-control.left span{
-	left: 0px;
+	left: -3px;
 }
 #projekte .carousel-control.right span{
-	right: 0px;
+	right: -3px;
 }
 
 
@@ -873,7 +877,7 @@ input,textarea {
 @media (max-width: 500px) {
 
 	#projekte .carousel-inner .item {
-		padding: 30px 55px 55px;
+		padding: 30px 25px 55px;
 	}
 	#projekte .carousel-caption p {
 		font-size: 14px;
