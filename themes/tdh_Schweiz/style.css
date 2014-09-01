@@ -833,29 +833,6 @@ input,textarea {
 }
 
 
-
-@media (max-width: 884px) {
-
-	#projekte .carousel-control.right span {
-		margin-right: 30px; 
-		right: 0%; 
-		float: right;
-	}
-	#projekte .carousel-control.left span {
-		margin-left: 30px; 
-		left: 0%; 
-		float: left;
-	}
-
-	#projekte .carousel-control span {
-		top:25px;
-	}
-
-	#projekte .carousel-inner .item {
-		padding: 55px 0px 55px;
-	}
-}
-
 @media (max-width: 1400px) {
 	h1{
 		font-size: 32px;
@@ -895,11 +872,16 @@ input,textarea {
 /*bis 500*/
 @media (max-width: 500px) {
 
-	#projekte .carousel-control.right span {
-		margin-right: 25px; 
+	#projekte .carousel-inner .item {
+		padding: 30px 55px 55px;
 	}
-	#projekte .carousel-control.left span {
-		margin-left: 25px; 
+	#projekte .carousel-caption p {
+		font-size: 14px;
+	}
+
+	#projekte .carousel-caption h3 {
+		font-size: 30px;
+		margin-bottom: 15px;
 	}
 	.story{
   		padding-bottom: 100%;

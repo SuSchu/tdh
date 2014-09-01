@@ -49,7 +49,7 @@ function ik_send_email($post_id){
  
 	$subject = "Bestätigung: Leben statt Flucht - Deine Mutgeschichte";
 	$body = "Guten Tag ".$name.".
-Du hast vor kurzem deine Mutmacher-Geschichte mit terre des hommes schweiz auf www.lebenstattflucht.ch geteilt. Sie ist jetzt online. Du findest sie unter diesem ".$post_url.", wo Du sie auch weiterverbreiten kannst. Schicke sie zum Beispiel deinem Mutmacher / deiner Mutmacherin. 
+Du hast vor kurzem deine Mutmacher-Geschichte mit terre des hommes schweiz auf www.lebenstattflucht.ch geteilt. Sie ist jetzt online. Du findest sie unter diesem Link ".$post_url.", wo Du sie auch weiterverbreiten kannst. Schicke sie zum Beispiel deinem Mutmacher / deiner Mutmacherin. 
 
 Danke dass Du mitgemacht hast!
 
@@ -60,7 +60,7 @@ Weitere Informationen findest Du auf unserer Webseite www.terredeshommesschweiz.
 Mit herzlichen Grüssen
 terre des hommes schweiz
 
-ps: falls Du keine Geschichte auf www.lebenstattflucht.h gepostet hast,  melde Dich bitte umgehend bei info@terredeshommes.ch
+ps: falls Du keine Geschichte auf www.lebenstattflucht.ch gepostet hast, melde Dich bitte umgehend bei info@terredeshommes.ch
 
 ---------------------------------------------------
 terre des hommes schweiz

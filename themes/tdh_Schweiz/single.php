@@ -3,7 +3,7 @@
     <div class="navbar" role="navigation">
       <div class="container">
           <div class="navbar-button">
-            <a class="back-link" href="<?php echo esc_url( home_url( '/' ) ); ?>"><span class="icon-chevron-left"></span>  zurück zur Übersicht</a>
+            <a class="back-link" href="<?php echo esc_url( home_url( '/#geschichten' ) ); ?>"><span class="icon-chevron-left"></span>  zurück zur Übersicht</a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -26,8 +26,21 @@
         <div class="container">
           <div class="row"> 
             <nav class="col-xs-12">
-              <?php previous_post_link('<p class="alignleft">&laquo; %link</p>', 'Letzte'); ?>
-              <?php next_post_link('<p class="alignright">%link &raquo;</p>', 'Nächste'); ?>
+
+               <?php $prev_post = get_previous_post();
+               if (!empty( $prev_post )): ?>
+                <p class="alignleft">&laquo;
+                  <a href="<?php echo get_permalink( $prev_post->ID ); ?>#geschichten">
+                  Letzte</a>
+                </p>
+               <?php endif; ?>
+              <?php $next_post = get_next_post();
+               if (!empty( $next_post )): ?>
+                <p class="alignright">
+                  <a href="<?php echo get_permalink( $prev_post->ID ); ?>#geschichten">
+                  Nächste</a>
+                &raquo;</p>
+               <?php endif; ?>
             </nav>
           </div>
         </div>
